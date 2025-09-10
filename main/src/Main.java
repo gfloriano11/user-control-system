@@ -1,3 +1,5 @@
+import User.UserController;
+
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -5,6 +7,7 @@ public class Main{
 
     public static void main(String[] args){
 
+        UserController userController = new UserController();
         Scanner scanner = new Scanner(System.in);
         boolean program_state = true;
 
@@ -25,6 +28,12 @@ public class Main{
             } else {
                 if(Objects.equals(option, "1")){
                     System.out.println("Insira os dados do usuário:");
+                }
+
+                if(Objects.equals(option, "3")){
+                    userController.addUser("Gustavo", "gustavofloriano70@gmail.com", "123", false);
+                    System.out.println("Listando usuários:");
+                    userController.getUsers();
                 }
 
             }
