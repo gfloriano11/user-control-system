@@ -15,4 +15,8 @@ public class User {
         this.password = userPass;
         this.role = userRole;
     }
+
+    public String toString(){
+        return id + ", " + name + ", " + email + ", " + password + ", " + role;
+    }
 }
