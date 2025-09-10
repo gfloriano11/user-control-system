@@ -13,4 +13,8 @@ public class UserController {
         id++;
         System.out.println("Novo usuário cadastrado com sucesso!");
     }
+
+    public void getUsers(){
+        System.out.println(users);
+    }
 }
