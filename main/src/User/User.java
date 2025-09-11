@@ -6,9 +6,9 @@ public class User {
     public String name;
     private String email;
     private String password;
-    public boolean role;
+    public String role;
 
-    public User(int userId, String userName, String userEmail, String userPass, boolean userRole){
+    public User(int userId, String userName, String userEmail, String userPass, String userRole){
         this.id = userId;
         this.name = userName;
         this.email = userEmail;

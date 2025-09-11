@@ -7,7 +7,7 @@ public class UserController {
     private List<User> users = new ArrayList<>();
     private int id = 1;
 
-    public void addUser(String nome, String email, String password, boolean role){
+    public void addUser(String nome, String email, String password, String role){
         User user = new User(id, nome, email, password, role);
         users.add(user);
         id++;
