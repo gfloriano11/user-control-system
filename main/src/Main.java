@@ -28,10 +28,31 @@ public class Main{
             } else {
                 if(Objects.equals(option, "1")){
                     System.out.println("Insira os dados do usuário:");
+                    System.out.println("Nome:");
+                    String name = scanner.next();
+                    System.out.println("E-mail:");
+                    String email = scanner.next();
+                    System.out.println("Password:");
+                    String password = scanner.next();
+                    System.out.println("Função:");
+                    System.out.println("[1] - Administrador");
+                    System.out.println("[2] - Colaborador");
+                    int role = scanner.nextInt();
+                    while(role != 1 && role != 2){
+                        System.out.println("Função inválida. Digite novamente:");
+                        System.out.println("[1] - Administrador");
+                        System.out.println("[2] - Colaborador");
+                        role = scanner.nextInt();
+                    }
+                    String textRole = "Colaborador";
+                    if(role == 1){
+                        textRole = "Administrador";
+                    }
+
+                    userController.addUser(name, email, password, textRole);
                 }
 
                 if(Objects.equals(option, "3")){
-                    userController.addUser("Gustavo", "gustavofloriano70@gmail.com", "123", false);
                     System.out.println("Listando usuários:");
                     userController.getUsers();
                 }
