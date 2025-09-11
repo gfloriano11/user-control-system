@@ -57,6 +57,12 @@ public class Main{
                     userController.getUsers();
                 }
 
+                if(Objects.equals(option, "4")){
+                    System.out.println("Qual usuário você quer deletar?");
+                    int deleteUser = scanner.nextInt();
+                    userController.deleteUser(deleteUser);
+                }
+
             }
 
         }
