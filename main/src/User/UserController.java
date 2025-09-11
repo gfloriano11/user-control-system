@@ -17,4 +17,9 @@ public class UserController {
     public void getUsers(){
         System.out.println(users);
     }
+
+    public void deleteUser(int id){
+        System.out.println("Deletando usuário " + id + "...");
+        users.remove(id-1);
+    }
 }
