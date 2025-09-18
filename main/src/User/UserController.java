@@ -18,6 +18,11 @@ public class UserController {
         System.out.println(users);
     }
 
+    public void editUser(int id){
+        System.out.println("Dados atuais:");
+        System.out.println(users.get(id-1));
+    }
+
     public void deleteUser(int id){
         System.out.println("Deletando usuário " + id + "...");
         users.remove(id-1);
