@@ -52,6 +52,12 @@ public class Main{
                     userController.addUser(name, email, password, textRole);
                 }
 
+                if(Objects.equals(option, "2")){
+                    System.out.println("Qual usuário você quer editar?");
+                    int editUser = scanner.nextInt();
+                    userController.editUser(editUser);
+                }
+
                 if(Objects.equals(option, "3")){
                     System.out.println("Listando usuários:");
                     userController.getUsers();
