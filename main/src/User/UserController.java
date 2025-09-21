@@ -10,6 +10,32 @@ public class UserController {
     private int id = 1;
     Scanner scanner = new Scanner(System.in);
 
+    public void createUser(){
+        System.out.println("Insira os dados do usuário:");
+        System.out.println("Nome:");
+        String name = scanner.next();
+        System.out.println("E-mail:");
+        String email = scanner.next();
+        System.out.println("Password:");
+        String password = scanner.next();
+        System.out.println("Função:");
+        System.out.println("[1] - Administrador");
+        System.out.println("[2] - Colaborador");
+        int role = scanner.nextInt();
+        while(role != 1 && role != 2){
+            System.out.println("Função inválida. Digite novamente:");
+            System.out.println("[1] - Administrador");
+            System.out.println("[2] - Colaborador");
+            role = scanner.nextInt();
+        }
+        String textRole = "Colaborador";
+        if(role == 1){
+            textRole = "Administrador";
+        }
+
+        addUser(name, email, password, textRole);
+    }
+
     public void addUser(String nome, String email, String password, String role){
         User user = new User(id, nome, email, password, role);
         users.add(user);
