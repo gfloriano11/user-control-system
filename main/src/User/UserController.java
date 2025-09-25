@@ -60,6 +60,23 @@ public class UserController {
         System.out.println("Função:");
         System.out.println("[1] - Administrador");
         System.out.println("[2] - Colaborador");
+        int role = scanner.nextInt();
+        while(role != 1 && role != 2){
+            System.out.println("Função inválida. Digite novamente:");
+            System.out.println("[1] - Administrador");
+            System.out.println("[2] - Colaborador");
+            role = scanner.nextInt();
+        }
+        String textRole = "Colaborador";
+        if(role == 1){
+            textRole = "Administrador";
+        }
+
+        User user = users.get(id-1);
+
+        user.name = name;
+        user.email = email;
+        user.role = textRole;
     }
 
     public void deleteUser(int id){
