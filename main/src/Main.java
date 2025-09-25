@@ -47,6 +47,11 @@ public class Main{
                     userController.deleteUser(deleteUser);
                 }
 
+                if(Objects.equals(option, "5")){
+                    // System.out.println("Qual usuário você deseja buscar?");
+                    // int user = scanner.nextInt();
+                    userController.getUser();
+                }
             }
 
         }
