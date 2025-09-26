@@ -48,9 +48,9 @@ public class Main{
                 }
 
                 if(Objects.equals(option, "5")){
-                    // System.out.println("Qual usuário você deseja buscar?");
-                    // int user = scanner.nextInt();
-                    userController.getUser();
+                    System.out.println("Qual usuário você deseja buscar?");
+                    int user = scanner.nextInt();
+                    userController.getUser(user);
                 }
             }
 

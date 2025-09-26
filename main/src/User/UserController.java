@@ -47,15 +47,20 @@ public class UserController {
         System.out.println(users);
     }
 
-    public void getUser(){
+    public void getUser(int id){
         // System.out.println(users.get(id-1));
-
+        List<User> searchedUsers = new ArrayList<>();
         int i = 0;
 
-        while(users != null){
-            System.out.println(users.get(i));
-            i++;
+        for(User user : users){
+            if(user != null){
+                if(user.getId() == id){
+                    searchedUsers.add(user);
+                }
+            }
         }
+
+        System.out.println(searchedUsers);
     }
 
     public void editUser(int id){
