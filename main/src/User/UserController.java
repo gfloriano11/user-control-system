@@ -54,7 +54,7 @@ public class UserController {
 
         for(User user : users){
             if(user != null){
-                if(Objects.equals(searchTerm, String.valueOf(user.getId())) || Objects.equals(searchTerm, String.valueOf(user.name))){
+                if(Objects.equals(searchTerm, String.valueOf(user.getId())) || Objects.equals(searchTerm.toLowerCase(), (String.valueOf(user.name)).toLowerCase())){
                     searchedUsers.add(user);
                 }
             }
