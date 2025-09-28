@@ -47,14 +47,14 @@ public class UserController {
         System.out.println(users);
     }
 
-    public void getUser(int id){
+    public void getUser(String searchTerm){
         // System.out.println(users.get(id-1));
         List<User> searchedUsers = new ArrayList<>();
         int i = 0;
 
         for(User user : users){
             if(user != null){
-                if(user.getId() == id){
+                if(Objects.equals(searchTerm, String.valueOf(user.getId())) || Objects.equals(searchTerm, String.valueOf(user.name))){
                     searchedUsers.add(user);
                 }
             }
