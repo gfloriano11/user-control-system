@@ -27,11 +27,6 @@ public class UserController {
         }
         System.out.println("Password:");
         String password = scanner.nextLine();
-        System.out.println(password.length());
-
-        if(password.length() > 5){
-            System.out.println("Senha correta.");
-        }
         while(Objects.equals(password, "") || password.length() < 6){
             System.out.println("Senha inválida. Digite novamente:");
             password = scanner.next();
@@ -62,6 +57,7 @@ public class UserController {
     }
 
     public void getUsers(){
+        System.out.println("|      ID      |      Nome      |      E-mail      |      Senha      |      Função      |");
         System.out.println(users);
     }
 
