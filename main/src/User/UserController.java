@@ -11,13 +11,31 @@ public class UserController {
     Scanner scanner = new Scanner(System.in);
 
     public void createUser(){
+
         System.out.println("Insira os dados do usuário:");
         System.out.println("Nome:");
-        String name = scanner.next();
+        String name = scanner.nextLine();
+        while(Objects.equals(name, "")){
+            System.out.println("Nome inválido. Digite novamente:");
+            name = scanner.nextLine();
+        }
         System.out.println("E-mail:");
-        String email = scanner.next();
+        String email = scanner.nextLine();
+        while(Objects.equals(email, "")){
+            System.out.println("E-mail inválido. Digite novamente:");
+            email = scanner.next();
+        }
         System.out.println("Password:");
-        String password = scanner.next();
+        String password = scanner.nextLine();
+        System.out.println(password.length());
+
+        if(password.length() > 5){
+            System.out.println("Senha correta.");
+        }
+        while(Objects.equals(password, "") || password.length() < 6){
+            System.out.println("Senha inválida. Digite novamente:");
+            password = scanner.next();
+        }
         System.out.println("Função:");
         System.out.println("[1] - Administrador");
         System.out.println("[2] - Colaborador");
